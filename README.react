@@ -1,0 +1,67 @@
+- 👋 Hi, I’m @miino10
+- 👀 I’m interested in ...
+- 🌱 I’m currently learning ...
+- 💞️ I’m looking to collaborate on ...
+- 📫 How to reach me ...
+
+<!---
+miino10/miino10 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+You can click the Preview link to take a look at your changes.
+---> app.js
+import React from "react";
+import ReactDOM from "react-dom";
+
+const date = new Date("March 13, 19 17:20");
+const curreantDate = date.getHours();
+console.log(curreantDate);
+
+let greating;
+
+let coustimeStyle = {
+  color: ""
+};
+
+if (curreantDate < 12) {
+  greating = "good morning";
+  coustimeStyle.color = "red";
+} else if (curreantDate > 12 && curreantDate < 18) {
+  greating = "good evening";
+  coustimeStyle.color = "blue";
+} else {
+  greating = "goood night";
+  coustimeStyle.color = "green";
+}
+ReactDOM.render(
+  <div>
+    <h1 className="heading" style={coustimeStyle}>
+      {greating}
+    </h1>
+  </div>,
+  document.getElementById("root")
+);
+
+app.css
+
+
+.heading {
+  font-size: 50px;
+  font-weight: bold;
+  border-bottom: 5px solid black;
+}
+
+
+app.html
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JSX</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script src="../src/index.js" type="text/javascript"></script>
+  </body>
+</html>
+
